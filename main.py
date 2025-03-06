@@ -39,7 +39,7 @@ def get_links(browser):
     else:
         toc_links = None
 
-    raw_links = body_content.find_elements(By.XPATH, './/a[not(ancestor::div[contains(@class, "reflist")]) and not(ancestor::div[@id="toc"]) ]')
+    raw_links = body_content.find_elements(By.XPATH, './/a[not(ancestor::div[contains(@class, "reflist")]) and not(ancestor::div[@id="toc"]) and not(starts-with(@href, "#cite")]')
 
     links = []
 
